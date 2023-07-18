@@ -52,6 +52,7 @@ const route =createBrowserRouter([
         {
           path : "login",
           element : <Login />,
+         
         }
         
       ]
@@ -61,7 +62,7 @@ const route =createBrowserRouter([
 
 const App = () => {
 
-  const [user, setUser] = useState()
+  
 
   return (
     

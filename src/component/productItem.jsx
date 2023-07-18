@@ -11,14 +11,11 @@ import data from '../data';
 
 const ProductItem = () => {
 
-    console.log(data);
   
     const {id} = useParams()
-    console.log(id);
     const [Data, setData] = useState(data)
 
-    const getMyData = data?.find(item => item.id == id)
-    console.log(getMyData);
+    const getMyData = Data?.find(item => item.id == id)
     const {title, img, info} = getMyData
 
     
