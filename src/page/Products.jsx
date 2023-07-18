@@ -1,9 +1,17 @@
 import React from 'react';
 
+import data from '../data';
+import Singlepro from './Singlepro';
+import Wrapper from '../Wrappers/Products';
+
+
+
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <Wrapper>
+    <Singlepro data={data} />
+    </Wrapper>
   )
 }
 
