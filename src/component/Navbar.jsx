@@ -3,11 +3,13 @@ import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import { Link, NavLink } from 'react-router-dom';
+import Wrapper from '../Wrappers/Navbar';
 
 
 const Navbar = () => {
   return (
-    <AppBar position="fixed" sx={{ top : 0}} >
+    <Wrapper>
+    <AppBar position="fixed" sx={{ top : 0}}>
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu">
           <MenuIcon />
@@ -31,6 +33,7 @@ const Navbar = () => {
         </Button>
       </Toolbar>
     </AppBar>
+    </Wrapper>
   );
 };
 

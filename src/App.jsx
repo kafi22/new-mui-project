@@ -3,6 +3,7 @@ import {Link, RouterProvider, createBrowserRouter} from 'react-router-dom'
 import {Home, About, Login, Products} from './page/index';
 import {  Layout, Error } from './component';
 import { useState } from 'react';
+import ProductItem from './component/productItem';
 
 
 
@@ -41,6 +42,11 @@ const route =createBrowserRouter([
         {
           path : 'product',
           element : (<Products />)
+        },
+
+        {
+          path : 'product/:id',
+          element : <ProductItem />
         },
 
         {

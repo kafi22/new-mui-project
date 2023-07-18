@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Wrapper from '../Wrappers/Singleproduct';
+import { Link } from 'react-router-dom';
 
 const Singlepro = ({data}) => {
 
@@ -30,7 +31,11 @@ const Singlepro = ({data}) => {
     </CardContent>
     <CardActions>
       <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
+      <Button size="small">
+        <Link to={`/product/${id}`}>
+        Learn More
+        </Link>
+        </Button>
     </CardActions>
   </Card>
     )
