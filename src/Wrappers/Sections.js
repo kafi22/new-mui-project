@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Sections = styled.section`
-padding : 20px;
-margin : 0 auto;
+padding : 40px 20px;
+margin : 2rem auto;
 height : 100%;
 width : 100%;
 max-width : 100%

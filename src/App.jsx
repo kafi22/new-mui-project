@@ -39,7 +39,7 @@ const route =createBrowserRouter([
         },
 
         {
-          path : 'products',
+          path : 'product',
           element : (<Products />)
         },
 
