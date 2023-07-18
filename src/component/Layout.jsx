@@ -1,14 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import {Navbar, Footer} from '../component/index'
+import {Navbar, Footer} from '../component/index';
+import Sections from '../Wrappers/Sections';
+
 
 const Layout = () => {
   return (
     <>
     <Navbar />
-    <section>
+    <Sections>
         <Outlet />
-    </section>
+    </Sections>
     <Footer />
     
     </>
