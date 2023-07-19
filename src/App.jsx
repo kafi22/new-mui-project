@@ -4,6 +4,7 @@ import {Home, About, Login, Products} from './page/index';
 import {  Layout, Error } from './component';
 import { useState } from 'react';
 import ProductItem from './component/productItem';
+import GlobalProvider from './UserContext/GlobalProvider';
 
 
 
@@ -62,11 +63,14 @@ const route =createBrowserRouter([
 
 const App = () => {
 
+
+
   
 
   return (
-    
-    <RouterProvider router={route} />
+    <GlobalProvider>
+      <RouterProvider router={route} />
+    </GlobalProvider>
    
   )
 }
