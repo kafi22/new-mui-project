@@ -5,6 +5,8 @@ import {  Layout, Error } from './component';
 import { useState } from 'react';
 import ProductItem from './component/productItem';
 import GlobalProvider from './UserContext/GlobalProvider';
+import ProtectedRoute from './component/ProtectedRoute';
+import Dashboard from './page/Dashboard';
 
 
 
@@ -54,7 +56,16 @@ const route =createBrowserRouter([
           path : "login",
           element : <Login />,
          
-        }
+        },
+
+        {
+          path : "dashboard",
+          element : (
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          )
+        },
         
       ]
     }

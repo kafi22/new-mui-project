@@ -2,11 +2,16 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Wrapper from '../Wrappers/Navbar';
+import UseCustomsApi from '../UserContext/UseCustomsApi';
 
 
 const Navbar = () => {
+
+ const {logOutFn, user} = UseCustomsApi()
+ const navigate = useNavigate()
+
   return (
     <Wrapper>
     <AppBar position="fixed" sx={{ top : 0}}>
@@ -26,11 +31,35 @@ const Navbar = () => {
         <Typography variant="body1" component="div"sx={{ marginRight: '12px' }} >
         <NavLink to={'product'}>Product</NavLink>
         </Typography>
-        <Button variant="outlined" color="inherit">
-          <Link to={'login'}>
-          Login
-          </Link>
-        </Button>
+
+        
+
+        
+
+        {user.email ? 
+
+          (
+          <Button variant='contained'
+          onClick={() => {logOutFn(), navigate('/login')}}
+
+          >
+              <Typography>
+                Logout
+              </Typography>
+          </Button>
+          )
+          :
+          (
+            <Button variant="outlined" color="inherit"
+            
+            >
+            <Link to={'login'}>
+            Login
+            </Link>
+          </Button>
+          )
+      }
+
       </Toolbar>
     </AppBar>
     </Wrapper>

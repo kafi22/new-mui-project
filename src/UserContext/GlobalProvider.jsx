@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import UseContextapi from "./UseContextapi";
 
 const GlobalProvider = (props) => {
 
 
-    const user = 'kafi ahmed'
+
+   const [user, setUser] = useState([])
+
+
+   const logOutFn = () => {
+      setUser([])
+      
+      
+   }
 
 
     return (
-       <UseContextapi.Provider value={{user}}>
+       <UseContextapi.Provider value={{user, setUser, logOutFn }}>
             {props.children}
        </UseContextapi.Provider>
     )
