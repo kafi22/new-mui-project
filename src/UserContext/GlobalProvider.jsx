@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UseContextapi from "./UseContextapi";
 
-const GlobalProvider = (props) => {
+const GlobalProvider = ({children}) => {
 
 
 
@@ -17,7 +17,7 @@ const GlobalProvider = (props) => {
 
     return (
        <UseContextapi.Provider value={{user, setUser, logOutFn }}>
-            {props.children}
+            {children}
        </UseContextapi.Provider>
     )
 }
